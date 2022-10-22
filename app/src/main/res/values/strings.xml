@@ -1,0 +1,13 @@
+<resources>
+   <string name="app_name">MNotification</string>
+   <string name="service_label">WhatsappListenerService</string>
+   <string name="incoming_message">Здесь отобразится перехваченное сообщение</string>
+
+   <string name="notification_logo">Intercepted Notification Logo</string>
+   <string name="notification_listener_service">"Notification Listener Service"</string>
+   <string name="notification_listener_service_explanation">«Чтобы приложение работало, Вам необходимо включить Службу прослушивания уведомлений. Включить ее сейчас?»</string>
+
+   <string name="yes">Yes</string>
+   <string name="no">No</string>
+
+</resources>
