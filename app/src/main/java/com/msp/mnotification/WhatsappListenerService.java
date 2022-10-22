@@ -10,14 +10,13 @@ import android.service.notification.StatusBarNotification;
 public class WhatsappListenerService extends NotificationListenerService {
 
    private static final class ApplicationPackageNames {
-      public static final String FACEBOOK_PACK_NAME = "com.facebook.katana";
-      public static final String FACEBOOK_MESSENGER_PACK_NAME = "com.facebook.orca";
+      public static final String TELEGRAM_PACK_NAME = "org.telegram.messenger";
       public static final String WHATSAPP_PACK_NAME = "com.whatsapp";
       public static final String INSTAGRAM_PACK_NAME = "com.instagram.android";
    }
 
    public static final class InterceptedNotificationCode {
-      public static final int FACEBOOK_CODE = 1;
+      public static final int TELEGRAM_CODE = 1;
       public static final int WHATSAPP_CODE = 2;
       public static final int INSTAGRAM_CODE = 3;
       public static final int OTHER_NOTIFICATIONS_CODE = 4; // игнорируем все уведомления с кодом == 4
@@ -69,9 +68,8 @@ public class WhatsappListenerService extends NotificationListenerService {
    private int matchNotificationCode(StatusBarNotification sbn) {
       String packageName = sbn.getPackageName();
 
-      if(packageName.equals(ApplicationPackageNames.FACEBOOK_PACK_NAME)
-              || packageName.equals(ApplicationPackageNames.FACEBOOK_MESSENGER_PACK_NAME)){
-         return(InterceptedNotificationCode.FACEBOOK_CODE);
+      if(packageName.equals(ApplicationPackageNames.TELEGRAM_PACK_NAME)){
+         return(InterceptedNotificationCode.TELEGRAM_CODE);
       }
       else if(packageName.equals(ApplicationPackageNames.INSTAGRAM_PACK_NAME)){
          return(InterceptedNotificationCode.INSTAGRAM_CODE);

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
    // Изменяет изображение MainActivity в зависимости от того, какое уведомление было перехвачено
    private void changeInterceptedNotificationImage(int notificationCode, String str){
       switch(notificationCode){
-         case WhatsappListenerService.InterceptedNotificationCode.FACEBOOK_CODE:
+         case WhatsappListenerService.InterceptedNotificationCode.TELEGRAM_CODE:
             interceptedNotificationImageView.setImageResource(R.drawable.facebook_logo);
             break;
          case WhatsappListenerService.InterceptedNotificationCode.INSTAGRAM_CODE:
